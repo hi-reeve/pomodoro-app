@@ -1,0 +1,15 @@
+.pomodoro {
+    @apply mt-10;
+    &__circle-outer {
+        box-shadow: 50px 50px 100px 0px hsla(235, 45%, 13%, 1),
+            -50px -50px 100px 0px hsla(234, 40%, 25%, 1);
+        
+        @apply bg-gradient-to-br from-gradient-dark to-gradient-light rounded-full md:w-[410px] md:h-[410px] w-[300px] h-[300px] mx-auto p-5;
+    }
+	&__circle-inner{
+		@apply bg-blue-very-dark w-full h-full rounded-full relative;
+	}
+	&__progress{
+		@apply bg-progressColor h-3 rounded-full;
+	}
+}

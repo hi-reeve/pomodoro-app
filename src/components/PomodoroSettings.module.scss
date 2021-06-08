@@ -1,0 +1,11 @@
+.settings {
+    @apply opacity-50 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer mt-10;
+    &__icon {
+        @apply w-8 h-8 mx-auto;
+    }
+}
+.dialog {
+    &__overlay {
+        @apply fixed inset-0 bg-black opacity-50;
+    }
+}

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --gray: hsl(229, 52%, 96%);
+        --very-light-blue: hsl(227, 100%, 92%);
+        --dark-blue: hsl(235, 35%, 18%);
+        --very-dark-blue: hsl(234, 39%, 14%);
+
+        --gradient-light: hsl(234, 33%, 27%);
+        --gradient-dark: hsl(235, 49%, 11%);
+    }
+
+    body {
+        background-color: var(--dark-blue);
+        color: var(--very-light-blue);
+    }
+}
+@layer components {
+    .orange {
+        --progress: hsl(0, 91%, 71%);
+    }
+    .cyan {
+        --progress: hsl(182, 91%, 71%);
+    }
+    .purple {
+        --progress: hsl(284, 89%, 74%);
+    }
+    .kumbh {
+        @apply font-kumbh-sans;
+    }
+    .roboto {
+        @apply font-roboto-sans;
+    }
+    .space {
+        @apply font-space-mono;
+    }
+}

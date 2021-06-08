@@ -1,0 +1,6 @@
+.app {
+    @apply p-8 w-full min-h-screen;
+    &--title {
+        @apply font-bold text-xl lowercase text-center;
+    }
+}
