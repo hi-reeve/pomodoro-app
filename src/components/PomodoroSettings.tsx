@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { AiTwotoneSetting } from "react-icons/ai";
 import style from "@/components/PomodoroSettings.module.scss";
-import { useRef } from "react";
 import DialogSettings from "./DialogSettings";
 const PomodoroSettings = () => {
     const [dialogVisible, setDialogVisible] = useState<boolean>(false);
-    const saveButtonRef = useRef<HTMLButtonElement>(null);
+
     const closeModal = () => {
         setDialogVisible(false);
     };

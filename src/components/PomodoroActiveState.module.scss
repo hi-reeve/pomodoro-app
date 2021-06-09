@@ -1,7 +1,7 @@
 .pomodoro-state {
     @apply rounded-full bg-blue-very-dark flex flex-row p-2 justify-evenly mt-10 max-w-[400px] w-full mx-auto;
     &__legend {
-		@apply h-full w-full text-center rounded-full p-4 select-none font-bold lowercase text-[0.9rem] opacity-40 transition-all duration-300 ease-in-out;
+		@apply h-full w-full text-center rounded-full p-4 select-none font-bold lowercase md:text-[0.875rem] text-[0.75rem] opacity-40 transition-all duration-300 ease-in-out;
         &-active {
             @apply bg-progressColor text-blue-very-dark opacity-100 ;
         }

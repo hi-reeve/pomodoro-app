@@ -8,6 +8,11 @@ module.exports = {
                 progressColor: {
                     DEFAULT: "var(--progress)",
                 },
+                theme: {
+                    orange: "var(--orange)",
+                    cyan: "var(--cyan)",
+                    purple: "var(--purple)",
+                },
                 blue: {
                     dark: "var(--dark-blue)",
                     "very-dark": "var(--very-dark-blue)",
@@ -16,6 +21,9 @@ module.exports = {
                 gradient: {
                     light: "var(--gradient-light)",
                     dark: "var(--gradient-dark)",
+                },
+                "custom-gray": {
+                    DEFAULT: "var(--gray)",
                 },
             },
             fontFamily: {

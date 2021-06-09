@@ -1,0 +1,12 @@
+.color-picker {
+    @apply w-10 h-10 rounded-full transition-all duration-150 ease-in-out grid place-items-center;
+    &--orange {
+        @apply bg-theme-orange;
+    }
+    &--cyan {
+        @apply bg-theme-cyan;
+    }
+    &--purple {
+        @apply bg-theme-purple;
+    }
+}

@@ -1,0 +1,15 @@
+.font-picker {
+    @apply w-10 h-10 bg-custom-gray grid place-items-center font-bold rounded-full hover:ring-4 hover:ring-gray-300 transition-all duration-150 ease-in-out cursor-pointer;
+    &--active {
+        @apply bg-black text-white hover:ring-0;
+    }
+    &--kumbh {
+        @apply font-kumbh-sans;
+    }
+    &--roboto {
+        @apply font-roboto-sans;
+    }
+    &--space {
+        @apply font-space-mono;
+    }
+}

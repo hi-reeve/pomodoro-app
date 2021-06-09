@@ -12,6 +12,10 @@
 
         --gradient-light: hsl(234, 33%, 27%);
         --gradient-dark: hsl(235, 49%, 11%);
+
+        --orange: hsl(0, 91%, 71%);
+        --cyan: hsl(182, 91%, 71%);
+        --purple: hsl(284, 89%, 74%);
     }
 
     body {
@@ -37,5 +41,14 @@
     }
     .space {
         @apply font-space-mono;
+    }
+    input[type="number"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
     }
 }
