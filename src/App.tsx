@@ -29,8 +29,33 @@ function App() {
     }, []);
 
     useEffect(() => {
-        setMinutes(settingContext.pomodoro);
-    }, [settingContext.pomodoro]);
+        switch (currentPomodoroState) {
+            case "active": {
+                setMinutes(settingContext.pomodoro);
+                setSeconds(0);
+                break;
+            }
+            case "short": {
+                setMinutes(settingContext.short);
+                setSeconds(0);
+                break;
+            }
+            case "long": {
+                setMinutes(settingContext.long);
+                setSeconds(0);
+                break;
+            }
+            default: {
+                setMinutes(settingContext.pomodoro);
+                setSeconds(0);
+            }
+        }
+    }, [
+        currentPomodoroState,
+        settingContext.pomodoro,
+        settingContext.short,
+        settingContext.long,
+    ]);
 
     const updateTime = (): void => {
         if (!start) return;
@@ -83,7 +108,7 @@ function App() {
 
     useEffect(() => {
         intv = window.setInterval(updateTime, 1000);
-		
+
         return () => {
             clearInterval(intv);
         };
@@ -102,10 +127,12 @@ function App() {
             <h1 className={style["app--title"]}>Pomodoro</h1>
 
             <PomodoroActiveState currentState={currentPomodoroState} />
+
             <PomodoroClock
                 start={start}
                 minutes={minutes}
                 seconds={seconds}
+                currentState={currentPomodoroState}
                 onStartPomodoro={startPomodoro}
                 onPausePomodoro={pausePomodoro}
             />

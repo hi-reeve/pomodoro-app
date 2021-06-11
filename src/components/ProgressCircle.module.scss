@@ -1,0 +1,6 @@
+.circle-container{
+	@apply absolute;
+}
+.circle-progress {
+    @apply stroke-current text-progressColor transition-all duration-300 ease-in-out origin-center transform -rotate-90;
+}
