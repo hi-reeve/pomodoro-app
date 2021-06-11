@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend mentor](https://www.frontendmentor.io/solutions/pomodoro-app-with-reactjs-and-tailwindcss-6ZOiJUtQY)
 - Live Site URL: [Live site](https://pomodoro-app-zynth17.vercel.app/)
 
 ### Built with
