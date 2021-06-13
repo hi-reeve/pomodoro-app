@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import style from "@/components/PomodoroClock.module.scss";
-import ProgressCircle from "./ProgressCircle";
 import { useState } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useContext } from "react";
 import { AppContext } from "@/store/AppContext";
 import { PomodoroState } from "@/types/Settings";
 
+const ProgressCircle = React.lazy(() => import("@/components/ProgressCircle"));
 type Props = {
     minutes: number;
     seconds: number;
@@ -75,11 +75,13 @@ const PomodoroClock: React.FC<Props> = ({
             <div className={style["pomodoro__circle-outer"]}>
                 <div className={style["pomodoro__circle-inner"]}>
                     <div className={style["pomodoro__content-wrapper"]}>
-                        <ProgressCircle
-                            progress={progress}
-                            radius={radius}
-                            strokeWidth={strokeWidth}
-                        />
+                        <Suspense fallback={<></>}>
+                            <ProgressCircle
+                                progress={progress}
+                                radius={radius}
+                                strokeWidth={strokeWidth}
+                            />
+                        </Suspense>
                         <span className={style.pomodoro__time}>
                             {minutes.toString().padStart(2, "0")}:
                             {seconds.toString().padStart(2, "0")}
